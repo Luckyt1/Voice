@@ -1,0 +1,34 @@
+import os
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    #初始化麦克风
+    wheeltec_mic = Node(
+        package="wheeltec_mic_aiui",
+        executable="wheeltec_mic",
+        output='screen',
+        parameters=[{"usart_port_name": "/dev/wheeltec_mic",
+                    "serial_baud_rate": 115200}]
+    )
+
+    wheeltec_mic_aiui = Node(
+        package="wheeltec_mic_aiui",
+        executable="wheeltec_mic_aiui",
+        output='screen',
+    )
+ # 命令识别
+    command_recognition = Node(
+        package="wheeltec_mic_aiui",
+        executable="command_recognition",
+        output='screen',
+    )
+
+    ld = LaunchDescription()
+
+    ld.add_action(wheeltec_mic)
+    ld.add_action(wheeltec_mic_aiui)
+    ld.add_action(command_recognition)
+    # ld.add_action(chat_service)
+    
+    return ld
