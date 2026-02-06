@@ -1,3 +1,5 @@
+# 声明
+调取的api根据官方的操作来走，不要用本人的api，如果发现将追究责任
 ## 准备工作
 ![alt text](image-2.png)
 ![alt text](image-3.png)
