@@ -29,3 +29,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/tang/github/Voice/src/wheeltec_mic
 即可解决
 ## 特别鸣谢
 吊毛沛民=-=
+![alt text](image-4.png)
