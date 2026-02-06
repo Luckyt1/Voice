@@ -465,6 +465,7 @@ int main(int argc, char** argv) {
     // 1. 创建AIUI监听器和Agent
     VoiceRecognitionListener listener;
     std::string cfgPath = "/home/tang/voice/ws_voice/src/wheeltec_mic_aiui/AIUI/cfg/aiui.cfg";
+    // 注意修改
     std::string cfg = readFile(cfgPath);
     
     if (cfg.empty()) {
